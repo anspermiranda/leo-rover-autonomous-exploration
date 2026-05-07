@@ -1,3 +1,4 @@
+//A
 #ifndef FRONTIER_SEARCH_H_
 #define FRONTIER_SEARCH_H_
 
@@ -19,6 +20,7 @@ struct Frontier {
   std::vector<geometry_msgs::msg::Point> points;
 };
 
+//B
 /**
  * @brief Thread-safe implementation of a frontier-search task for an input
  * costmap.
@@ -44,6 +46,7 @@ public:
    */
   std::vector<Frontier> searchFrom(geometry_msgs::msg::Point position);
 
+//C
 protected:
   /**
    * @brief Starting from an initial cell, build a frontier from valid adjacent
@@ -81,6 +84,7 @@ private:
   nav2_costmap_2d::Costmap2D* costmap_;
   unsigned char* map_;
   unsigned int size_x_, size_y_;
+  //D
   double potential_scale_, gain_scale_;
   double min_frontier_size_;
 };
