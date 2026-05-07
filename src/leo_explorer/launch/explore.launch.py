@@ -7,7 +7,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
-
+#a
 def generate_launch_description():
     ld = LaunchDescription()
     config = os.path.join(
@@ -27,6 +27,7 @@ def generate_launch_description():
 
     remappings = [("/tf", "tf"), ("/tf_static", "tf_static")]
 
+    #b
     node = Node(
         package="leo_explorer",
         name="explore_node",
