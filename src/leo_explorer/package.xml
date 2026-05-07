@@ -5,8 +5,6 @@
   <version>1.0.0</version>
 
   <description>Frontier-based exploration for the Leo rover.</description>
-
-  <maintainer email="nathanshankar465@gmail.com">nathan</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
