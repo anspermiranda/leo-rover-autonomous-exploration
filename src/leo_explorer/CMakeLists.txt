@@ -6,6 +6,7 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
 endif()
 
+#A
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -58,6 +59,7 @@ set(DEPENDENCIES
   visualization_msgs
 )
 
+#B
 include_directories(
     include
 )
@@ -89,7 +91,7 @@ target_include_directories(explore PUBLIC
 
 
 target_link_libraries(explore ${rclcpp_LIBRARIES})
-
+#C
 ament_target_dependencies(explore ${DEPENDENCIES})
 
 install(TARGETS explore
