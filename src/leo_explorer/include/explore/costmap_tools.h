@@ -1,3 +1,4 @@
+//A
 #ifndef COSTMAP_TOOLS_H_
 #define COSTMAP_TOOLS_H_
 
@@ -7,6 +8,7 @@
 
 #include "nav2_costmap_2d/costmap_2d_ros.hpp"
 
+//B
 namespace frontier_exploration
 {
 /**
