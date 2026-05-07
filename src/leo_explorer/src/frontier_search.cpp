@@ -6,6 +6,7 @@
 
 #include "nav2_costmap_2d/cost_values.hpp"
 
+//A
 namespace frontier_exploration
 {
 using nav2_costmap_2d::FREE_SPACE;
@@ -36,6 +37,7 @@ FrontierSearch::searchFrom(geometry_msgs::msg::Point position)
     return frontier_list;
   }
 
+  //B
   // make sure map is consistent and locked for duration of search
   std::lock_guard<nav2_costmap_2d::Costmap2D::mutex_t> lock(
       *(costmap_->getMutex()));
@@ -67,6 +69,7 @@ FrontierSearch::searchFrom(geometry_msgs::msg::Point position)
     unsigned int idx = bfs.front();
     bfs.pop();
 
+    //C
     // iterate over 4-connected neighbourhood
     for (unsigned nbr : nhood4(idx, *costmap_)) {
       // add to queue all free, unvisited cells, use descending search in case
@@ -127,7 +130,7 @@ Frontier FrontierSearch::buildNewFrontier(unsigned int initial_cell,
   while (!bfs.empty()) {
     unsigned int idx = bfs.front();
     bfs.pop();
-
+    //D
     // try adding cells in 8-connected neighborhood to frontier
     for (unsigned int nbr : nhood8(idx, *costmap_)) {
       // check if neighbour is a potential frontier cell
